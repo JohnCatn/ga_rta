@@ -66,11 +66,13 @@ jwtClient.authorize(function(err, tokens) {
         var downinLast10Mins = 0;
         var downinLast15Mins = 0;
 
-
+        // Check there are some records
+        if (typeof response.rows == 'undefined' || response.rows == null){
+            console.log("No records returned so exit.");
+            return;
+        }
+        // Loop through the records to check if the last 3 minutes contain data
         for (var i = 0; i < response.rows.length; i++) {
-            console.log("Row " + i);
-            console.log(response.rows[i][0]);
-            console.log(response.rows[i][1]);
             var views = response.rows[i][1];
             // count how many of the first 5 minutes have had page views
             if (i < 3 && views > config.alert.triggerVolume) {
