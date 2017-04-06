@@ -1,9 +1,9 @@
 # Real Time Alerts for Google Analytics.
 This script performs the following:
--- Call the Google Analytics Real Time API
--- Perform a query defined in config that returns page hits
--- checks if page hits are greater than a threshold in each of the last 3,10 and 15 minutes
--- sends an email alert if the page views are higher than the threshold
+- Call the Google Analytics Real Time API
+- Perform a query defined in config that returns page hits
+- checks if page hits are greater than a threshold in each of the last 3,10 and 15 minutes
+- sends an email alert if the page views are higher than the threshold
 
 #Installation
 -Install [Node](https://nodejs.org/en/download/)
