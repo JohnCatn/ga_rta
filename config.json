@@ -1,0 +1,20 @@
+{
+  "smtp": {
+      "server": "<SMTP_SERVER>",
+      "port": 25,
+      "from": "<FROM_ADDRESS>",
+      "to": "<TO_ADDRESSES>"
+    },
+  "ga": {
+    "ids": "ga:<GA_VIEW_ID>",
+    "metrics": "rt:pageviews",
+    "dimensions": "rt:minutesAgo",
+    "sort": "rt:minutesAgo",
+    "filters": "rt:pageTitle=@<PAGE_TITLE>"
+  },
+  "alert": {
+    "triggerVolume": 2,
+    "subject":"<PAGE_TITLE> displayed for more than ",
+    "body":"The <PAGE_TITLE> page has been showing, please investigate"
+  }
+}

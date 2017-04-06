@@ -1,0 +1,12 @@
+{
+  "name": "ga_rta",
+  "version": "1.0.0",
+  "description": "This function will run a real time query against GA API",
+  "main": "index.js",
+  "author": "John Catnach",
+  "license": "MIT",
+  "dependencies": {
+    "googleapis": "^18.0.0",
+    "nodemailer": "^3.1.8"
+  }
+}
