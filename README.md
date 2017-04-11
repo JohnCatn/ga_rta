@@ -28,6 +28,25 @@ This script performs the following:
 - Set up a service account to access google analytics and save the json file as ga_credentials.json in the program directory.
   - For a simply guide to setting up access refere to [this post](http://2ality.com/2015/10/google-analytics-api.html) by @rauschma 
   
-#Operation
+- If you are running on windows then you will also need to install the [node-windows library](https://github.com/coreybutler/node-windows) with the following commands:
+  - npm install -g node-windows
+  - npm link node-windows 
+  
+# Operation
+
+### Windows
+Once configured just run "node index_windows.js"
+
+### Other
 Once configured just run "node index.js"
+
+# Enhancements
+There are several, but a few.
+ - add setInterval to run the check periodically
+    - On windows node-windows has functionality to run as a service so this would be an ideal enhancement to the windows script
+ - add additional alert end points eg:
+    - Slack
+    - SMS
+    - JSON endpoint
+ - improve error handling
   
